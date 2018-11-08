@@ -1,0 +1,13 @@
+version: '2.4'
+
+services:
+  trac:
+    build: '.'
+    restart: "unless-stopped"
+    image: "samburney/trac:latest"
+    volumes:
+      - "./data/trac/:/trac"
+      - "./data/apache2/sites-available:/etc/apache2/sites-available"
+    ports:
+      - "80:80"
+      - "443:443"

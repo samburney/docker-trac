@@ -22,6 +22,10 @@ RUN apt-get update \
     libapache2-mod-authnz-external \
     libapache2-mod-python \
     php-cli \
+    php-mysql \
+    php-pear \
+    ldap-utils \
+ && pear install MDB2-beta#mysqli \
  && apt-get clean \
  && rm -r /var/lib/apt/lists/*
 

@@ -7,7 +7,7 @@ services:
     image: "samburney/trac:latest"
     volumes:
       - "./data/trac/:/trac"
-      - "./data/apache2/sites-available:/etc/apache2/sites-available"
+      - "./data/apache2/sites-enabled:/etc/apache2/sites-enabled"
     ports:
       - "80:80"
       - "443:443"

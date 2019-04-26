@@ -1,0 +1,7 @@
+#!/usr/bin/with-contenv bash
+
+# If syslog -> stdout sidecar is mounted, symlink to /dev/log
+# Using: outstand/syslog-ng-stdout:latest
+if [ -S /sidecar/log ] ; then
+    ln -s /sidecar/log /dev/log
+fi

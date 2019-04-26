@@ -1,0 +1,9 @@
+#!/usr/bin/with-contenv bash
+
+echo "Starting Mail Server"
+
+# Update aliases
+/usr/sbin/postalias /etc/aliases
+
+exec \
+	/usr/sbin/postfix start-fg
